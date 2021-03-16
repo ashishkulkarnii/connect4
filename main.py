@@ -33,10 +33,11 @@ clear()
 print(" CONNECT 4!\n\n")
 player1 = input("Player 1: Choose your character!\n")
 player1 = player1[0]
+sleep(.5)
 player2 = input("Player 2: Choose your character!\n")
 player2 = player2[0]
 player1_score, player2_score = 0, 0
-sleep(2)
+sleep(1)
 clear()
 
 def main(player1_score, player2_score):
@@ -53,7 +54,6 @@ def main(player1_score, player2_score):
         if counter % 2 == 1:
             #player1
             print("\nPlayer {}'s Turn!\n".format(player1))
-            sleep(1)
             try:
                 c = int(input("Enter column to drop coin: "))
             except:
@@ -67,7 +67,7 @@ def main(player1_score, player2_score):
                     printNice(boardx)
                     board = boardx
                     if callCheck(board) != None:
-                        print("Player {} is the winner!".format(callCheck(board)))
+                        print("Player {} is the winner!\n".format(callCheck(board)))
                         player1_score += 1
                         break
                 else:
@@ -79,7 +79,6 @@ def main(player1_score, player2_score):
         if counter % 2 == 0:
             #player2
             print("\nPlayer {}'s Turn!\n".format(player2))
-            sleep(1)
             try:
                 c = int(input("Enter column to drop coin: "))
             except:
@@ -93,7 +92,7 @@ def main(player1_score, player2_score):
                     printNice(boardx)
                     board = boardx
                     if callCheck(board) != None:
-                        print("Player {} is the winner!".format(callCheck(board)))
+                        print("Player {} is the winner!\n".format(callCheck(board)))
                         player2_score += 1
                         break
                 else:
@@ -104,7 +103,8 @@ def main(player1_score, player2_score):
             
         clear()
     
-    print("Player {}'s score: {}\n\nPlayer {}'s score: {}\n\n\n".format(player1, player1_score, player2, player2_score))
+    print("Player {}'s score: {}\nPlayer {}'s score: {}\n".format(player1, player1_score, player2, player2_score))
+    sleep(2)
     a = input("Do you want to play again? (Y/n)\n")
     if a == 'Y':
         board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
