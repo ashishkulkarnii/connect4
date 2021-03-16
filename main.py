@@ -14,31 +14,32 @@ counter = 1
 
 clear()
 
-print("	Loading.")
+print(" Loading.")
 sleep(.2)
 clear()
-print("	Loading..")
+print(" Loading..")
 sleep(.2)
 clear()
-print("	Loading...")
+print(" Loading...")
 sleep(.2)
 clear()
-print("	Loading....")
+print(" Loading....")
 sleep(.2)
 clear()
-print("	CONNECT 4!")
+print(" CONNECT 4!")
 sleep(2)
 clear()
 
+print(" CONNECT 4!\n\n")
 player1 = input("Player 1: Choose your character!\n")
 player1 = player1[0]
 player2 = input("Player 2: Choose your character!\n")
 player2 = player2[0]
-
+player1_score, player2_score = 0, 0
 sleep(2)
 clear()
 
-def main():
+def main(player1_score, player2_score):
     
     clear()
     
@@ -67,6 +68,7 @@ def main():
                     board = boardx
                     if callCheck(board) != None:
                         print("Player {} is the winner!".format(callCheck(board)))
+                        player1_score += 1
                         break
                 else:
                     print("Try again!")
@@ -92,6 +94,7 @@ def main():
                     board = boardx
                     if callCheck(board) != None:
                         print("Player {} is the winner!".format(callCheck(board)))
+                        player2_score += 1
                         break
                 else:
                     print("Try again!")
@@ -100,10 +103,12 @@ def main():
             counter += 1
             
         clear()
-        
+    
+    print("Player {}'s score: {}\n\nPlayer {}'s score: {}\n\n\n".format(player1, player1_score, player2, player2_score))
     a = input("Do you want to play again? (Y/n)\n")
     if a == 'Y':
         board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
-        main()
+        main(player1_score, player2_score)
 
-main()
+main(0, 0)
+
