@@ -110,5 +110,5 @@ def main(player1_score, player2_score):
         board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
         main(player1_score, player2_score)
 
-main(0, 0)
+main(player1_score, player2_score)
 
