@@ -1,12 +1,8 @@
 from board import dropCoin
-from disp import printNice
+from disp import printNice, loadingScreen, clear
 from checkb import callCheck
-from os import system, name 
 from time import sleep
 
-def clear(): 
-    if name == 'nt': 
-        _ = system('cls') 
 
 board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
 
@@ -14,21 +10,7 @@ counter = 1
 
 clear()
 
-print(" Loading.")
-sleep(.2)
-clear()
-print(" Loading..")
-sleep(.2)
-clear()
-print(" Loading...")
-sleep(.2)
-clear()
-print(" Loading....")
-sleep(.2)
-clear()
-print(" CONNECT 4!")
-sleep(2)
-clear()
+loadingScreen()
 
 print(" CONNECT 4!\n\n")
 player1 = input("Player 1: Choose your character!\n")
@@ -39,6 +21,7 @@ player2 = player2[0]
 player1_score, player2_score = 0, 0
 sleep(1)
 clear()
+
 
 def main(player1_score, player2_score):
     
@@ -109,6 +92,7 @@ def main(player1_score, player2_score):
     if a == 'Y':
         board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
         main(player1_score, player2_score)
+
 
 main(player1_score, player2_score)
 
