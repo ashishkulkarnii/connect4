@@ -3,12 +3,13 @@ def checkVertical(board):
         for j in range(0, 7):
             x = board[i][j]
             if x != 0:
+                
                 if board[i + 1][j] == x and board[i + 2][j] == x and board[i + 3][j] == x:
                     return x
 
 def checkHorizontal(board):
     for i in range(0, 6):
-        for j in range(0, 3):
+        for j in range(0, 4):
             x = board[i][j]
             if x != 0:
                 if board[i][j + 1] == x and board[i][j + 2] == x and board[i][j + 3] == x:    
