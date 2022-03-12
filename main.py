@@ -30,7 +30,7 @@ def main(player1_score, player2_score):
     global counter
     global board
     
-    while counter < 42:
+    while counter =< 42:
 
         printNice(board)
         
