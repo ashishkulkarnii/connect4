@@ -90,6 +90,7 @@ def main(player1_score, player2_score):
     sleep(2)
     a = input("Do you want to play again? (Y/n)\n")
     if a == 'Y':
+        counter = 0
         board = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
         main(player1_score, player2_score)
 
