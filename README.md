@@ -20,4 +20,4 @@ In real life, the board is a vertically mounted grid. So, in order to simulate t
 In case the column already has 6 coins, the function governing the ‘drop coin’ action asks for a different column number from the user. 
 
 
-You can try our code by installing all the files into the same folder and running main.py in the terminal.
+You can try our code by installing all the files into the same folder and running ```main.py``` in the terminal.
